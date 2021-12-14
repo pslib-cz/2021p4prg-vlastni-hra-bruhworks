@@ -9,11 +9,13 @@ public class PlayerController : MonoBehaviour
     public float speed = 10f;
     public float jumpPower = 15f;
     public int extraJumps = 1;
-    public LayerMask groundLayer;
-    public Rigidbody2D rb;
-    public Transform feet;
+    [SerializeField] LayerMask groundLayer;
+    [SerializeField] Rigidbody2D rb;
+    [SerializeField] Transform feet;
+    SpriteRenderer sp;
+    Animator an;
 
-
+    bool _facingRight;
     bool _isGrounded;
     float _mx;
     float _jumpCoolDown;
@@ -22,17 +24,30 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        an = GetComponent<Animator>();
+        sp = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         rb.velocity = new Vector2(_mx * speed, rb.velocity.y);
+        if (_mx != 0) _facingRight = (_mx < 0);
+        sp.flipX = _facingRight;
     }
 
     private void Update()
     {
         _mx = Input.GetAxis("Horizontal");
+        if(_mx != 0)
+        {
+            an.SetBool("isMoving", true);
+        }
+        else
+        {
+            an.SetBool("isMoving", false);
+        }
+
         if (Input.GetButtonDown("Jump"))
         {
             Jump();
