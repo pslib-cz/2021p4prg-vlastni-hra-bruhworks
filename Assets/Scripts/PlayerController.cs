@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 10f;
-    public float jumpPower = 15f;
+    public float speed = 8f;
+    public float jumpPower = 12f;
     public int extraJumps = 1;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Rigidbody2D rb;
