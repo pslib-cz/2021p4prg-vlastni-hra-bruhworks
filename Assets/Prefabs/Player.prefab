@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3633117221181797539}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.7, y: -4.09, z: 0}
-  m_LocalScale: {x: 1.183, y: 1.183, z: 1.183}
+  m_LocalScale: {x: 1.4964949, y: 1.4964949, z: 1.4964949}
   m_Children:
   - {fileID: 3633117221245762600}
   m_Father: {fileID: 0}
@@ -126,7 +126,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &3633117221181797542
 BoxCollider2D:
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3499ff757b514b4e8902ed128eedc84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 6
   jumpPower: 12
   extraJumps: 1
   groundLayer:

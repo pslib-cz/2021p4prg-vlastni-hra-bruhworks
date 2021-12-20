@@ -71,10 +71,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 16.4, y: 9}
-      - {x: 16.4, y: 0}
-      - {x: -0.4, y: 0}
-      - {x: -0.4, y: 9}
+    - - {x: 16, y: 9}
+      - {x: 16, y: 0}
+      - {x: 0, y: 0}
+      - {x: 0, y: 9}
 --- !u!1 &4523811993114698743
 GameObject:
   m_ObjectHideFlags: 0
