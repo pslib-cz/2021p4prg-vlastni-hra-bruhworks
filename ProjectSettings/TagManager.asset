@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Deadly
   - Secret
+  - NonHitable
+  - Room
   layers:
   - Default
   - TransparentFX
