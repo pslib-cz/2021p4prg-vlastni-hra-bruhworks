@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 10f;
     public float jumpPower = 15f;
     public int extraJumps = 1;
+    public int level;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Transform feet;
@@ -81,5 +82,15 @@ public class PlayerController : MonoBehaviour
         {
             _isGrounded = false;
         }
+    }
+    public void SavePlayer()
+    {
+        SaveSystem.SavePlayer(this);
+    }
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        level = data.level;
     }
 }
