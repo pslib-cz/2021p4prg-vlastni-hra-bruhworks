@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1885607424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1885607425}
+  m_Layer: 0
+  m_Name: FirePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1885607425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885607424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3633117221181797540}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3633117221181797539
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,6 +45,7 @@ GameObject:
   - component: {fileID: 3633117221181797542}
   - component: {fileID: 3633117221181797543}
   - component: {fileID: 3633117221181797538}
+  - component: {fileID: 693419405}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -34,6 +65,7 @@ Transform:
   m_LocalScale: {x: 1.4964949, y: 1.4964949, z: 1.4964949}
   m_Children:
   - {fileID: 3633117221245762600}
+  - {fileID: 1885607425}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -169,11 +201,13 @@ MonoBehaviour:
   speed: 6
   jumpPower: 12
   extraJumps: 1
+  level: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   rb: {fileID: 3633117221181797545}
   feet: {fileID: 3633117221245762600}
+  _facingRight: 0
 --- !u!114 &3633117221181797538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +220,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853b6ef991db2a64db6c63b8fc60183f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &693419405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3633117221181797539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ecabc87c287204c8217e1b95c059c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 1885607425}
+  bulletPrefab: {fileID: 8139389221634149536, guid: d98da2b2ad301d640b2a892afe2ba1cc, type: 3}
 --- !u!1 &3633117221245762601
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,8 +10,10 @@ public class LevelManager : MonoBehaviour
     public Transform respointPoint;
     public GameObject playerPrefab;
 
-    int _deaths = 0;
-
+    private void Start()
+    {
+        Deaths.SetText("Deaths: " + PlayerPrefs.GetInt("deaths"));
+    }
     private void Awake()
     {
         instance = this;
@@ -19,7 +21,8 @@ public class LevelManager : MonoBehaviour
     public void Respawn()
     {
         Instantiate(playerPrefab, respointPoint.position, Quaternion.identity);
-        _deaths++;
-        Deaths.SetText("Deaths: " + _deaths);
+        int deaths = PlayerPrefs.GetInt("deaths");
+        PlayerPrefs.SetInt("deaths", deaths+1);
+        Deaths.SetText("Deaths: " + PlayerPrefs.GetInt("deaths"));
     }
 }

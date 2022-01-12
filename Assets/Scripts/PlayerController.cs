@@ -15,7 +15,9 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer sp;
     Animator an;
 
-    bool _facingRight;
+ 
+
+    [HideInInspector] public bool facingRight = true;
     bool _isGrounded;
     float _mx;
     float _jumpCoolDown;
@@ -32,8 +34,8 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = new Vector2(_mx * speed, rb.velocity.y);
-        if (_mx != 0) _facingRight = (_mx < 0);
-        sp.flipX = _facingRight;
+        if (_mx != 0) facingRight = (_mx < 0);
+        sp.flipX = facingRight;
     }
 
     private void Update()
@@ -81,5 +83,13 @@ public class PlayerController : MonoBehaviour
         {
             _isGrounded = false;
         }
+    }
+public void SavePlayer()
+    {
+        SaveSystem.SavePlayer(this);
+    }
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
     }
 }

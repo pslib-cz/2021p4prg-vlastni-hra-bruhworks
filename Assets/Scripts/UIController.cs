@@ -9,7 +9,7 @@ public class UIController : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene("LevelSelection");
     }
     public void PlayGround()
     {

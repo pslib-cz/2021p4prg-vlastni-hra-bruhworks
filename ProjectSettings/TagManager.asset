@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Deadly
   - Secret
+  - Bullet
+  - Room
   layers:
   - Default
   - TransparentFX
