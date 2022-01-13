@@ -18462,7 +18462,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lava (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 515084406573834944, guid: 22bd63c19160bab4e8c7e0c22a221e4c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 22bd63c19160bab4e8c7e0c22a221e4c, type: 3}
 --- !u!1001 &1451311458
 PrefabInstance:
@@ -19099,6 +19100,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 515084406573834944, guid: 22bd63c19160bab4e8c7e0c22a221e4c, type: 3}
+      propertyPath: m_Size.x
+      value: 20.318207
+      objectReference: {fileID: 0}
+    - target: {fileID: 515084406573834944, guid: 22bd63c19160bab4e8c7e0c22a221e4c, type: 3}
+      propertyPath: m_Offset.x
+      value: -5.0390983
+      objectReference: {fileID: 0}
     - target: {fileID: 5979225022840869188, guid: 22bd63c19160bab4e8c7e0c22a221e4c, type: 3}
       propertyPath: m_RootOrder
       value: 19

@@ -16,7 +16,7 @@ public class PortalScript : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            if(SceneManager.GetActiveScene().buildIndex == 4)
+            if(SceneManager.GetActiveScene().buildIndex == 5)
             {
                 Debug.Log("YOU WIN");
             }
